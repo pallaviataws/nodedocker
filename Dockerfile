@@ -37,6 +37,17 @@ ENV PATH $NVM_DIR/versions/node/v$NODE_VERSION/bin:$PATH
 # confirm installation
 RUN node -v
 RUN npm -v
-WORKDIR /usr/src/app
-COPY package.json .
-RUN npm install
+
+
+# install git
+RUN apt-get install -y git git-core
+
+ADD start.sh /tmp/
+
+RUN chmod +x /tmp/start.sh
+
+CMD ./tmp/start.sh
+
+# WORKDIR /usr/src/app
+# COPY package.json .
+# RUN npm install
