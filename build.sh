@@ -4,7 +4,8 @@
 sudo docker version
 
 # build the image based on the Dockerfile and name it `nvm`
-sudo docker build -t nvm .
+# cache should be enabled. the git should pull the code everytime, if cache is enabled
+sudo docker build --no-cache=true -t nvm .
 
 # confirm image is present
 sudo docker images
