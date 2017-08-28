@@ -11,4 +11,4 @@ sudo docker build  --no-cache -t nvm .
 sudo docker images
 
 # enter container terminal
-sudo docker run -p 8080:8080 -i -t nvm bash
+sudo docker run -p 8090:8080 -i -t nvm bash
