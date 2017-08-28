@@ -46,7 +46,7 @@ RUN apt-get install -y git git-core
 
 # RUN chmod +x /tmp/start.sh
 
-EXPOSE 8000
+EXPOSE 8080
 
 # cd /tmp
 
