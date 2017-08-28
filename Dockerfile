@@ -42,12 +42,23 @@ RUN npm -v
 # install git
 RUN apt-get install -y git git-core
 
-ADD start.sh /tmp/
+# ADD start.sh /tmp/
 
-RUN chmod +x /tmp/start.sh
+# RUN chmod +x /tmp/start.sh
 
 EXPOSE 8000
-CMD ./tmp/start.sh
+
+# cd /tmp
+
+# try to remove the repo if it already exists
+# rm -rf nodedocker; true
+
+git clone https://github.com/pallaviataws/nodedocker.git
+
+cd nodedocker
+
+CMD [ "npm", "start" ]
+# not working CMD ./tmp/start.sh
 
 # WORKDIR /usr/src/app
 # COPY package.json .
