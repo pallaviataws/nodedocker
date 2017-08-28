@@ -55,7 +55,7 @@ EXPOSE 8000
 
 RUN git clone https://github.com/pallaviataws/nodedocker.git
 
-RUN cd nodedocker
+WORKDIR nodedocker
 
 RUN npm install
 RUN npm start
