@@ -42,9 +42,9 @@ RUN npm -v
 # install git
 RUN apt-get install -y git git-core
 
-# ADD start.sh /tmp/
+ADD start.sh /tmp/
 
-# RUN chmod +x /tmp/start.sh
+
 
 EXPOSE 8090
 
@@ -58,8 +58,9 @@ RUN git clone https://github.com/pallaviataws/nodedocker.git
 WORKDIR nodedocker
 
 RUN npm install
+RUN chmod +x /tmp/start.sh
 #RUN npm start
-CMD [ "npm", "start" ]
+#CMD [ "npm", "start" ]
 # not working CMD ./tmp/start.sh
 
 # WORKDIR /usr/src/app
