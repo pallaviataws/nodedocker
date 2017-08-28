@@ -58,7 +58,7 @@ RUN git clone https://github.com/pallaviataws/nodedocker.git
 WORKDIR nodedocker
 
 RUN npm install
-RUN chmod +x /tmp/start.sh
+CMD npm -s start
 #RUN npm start
 #CMD [ "npm", "start" ]
 # not working CMD ./tmp/start.sh
