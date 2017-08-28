@@ -7,6 +7,4 @@ git clone https://github.com/pallaviataws/nodedocker.git
 
 cd nodedocker
 
-npm install
-
-node .
+CMD [ "npm", "start" ]

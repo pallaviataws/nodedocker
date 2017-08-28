@@ -46,6 +46,7 @@ ADD start.sh /tmp/
 
 RUN chmod +x /tmp/start.sh
 
+EXPOSE 8000
 CMD ./tmp/start.sh
 
 # WORKDIR /usr/src/app
