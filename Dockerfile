@@ -53,9 +53,9 @@ EXPOSE 8000
 # try to remove the repo if it already exists
 # rm -rf nodedocker; true
 
-git clone https://github.com/pallaviataws/nodedocker.git
+RUN git clone https://github.com/pallaviataws/nodedocker.git
 
-cd nodedocker
+RUN cd nodedocker
 
 CMD [ "npm", "start" ]
 # not working CMD ./tmp/start.sh
