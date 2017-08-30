@@ -15,4 +15,4 @@ sudo docker images
 sudo docker run -p 8090:8080 -d nvm 
 
 
-sudo docker run -p 8000:8080 -d nginx 
+sudo docker run --rm -p 8000:8080  nginx 
