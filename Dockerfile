@@ -42,8 +42,8 @@ RUN npm -v
 # install git
 RUN apt-get install -y git git-core
 
-ADD start.sh /tmp/
-
+# ADD start.sh /tmp/
+# RUN chmod +x /tmp/start.sh
 
 
 EXPOSE 8090
@@ -53,9 +53,11 @@ EXPOSE 8090
 # try to remove the repo if it already exists
 # rm -rf nodedocker; true
 
-RUN git clone https://github.com/pallaviataws/nodedocker.git
+#RUN git clone https://github.com/pallaviataws/nodedocker.git
 
+COPY /nodedocker .
 WORKDIR nodedocker
+
 
 RUN npm install
 CMD npm -s start
