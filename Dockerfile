@@ -56,12 +56,14 @@ WORKDIR nodedocker
 
 #RUN git clone https://github.com/pallaviataws/nodedocker.git
 
-COPY package.json package-lock.json .
+# COPY package.json package-lock.json .
 
-RUN npm install
+
 
 # Bundle app source
 COPY . .
+
+RUN npm install
 
 
 EXPOSE 8090
