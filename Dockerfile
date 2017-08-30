@@ -46,8 +46,9 @@ RUN apt-get install -y git git-core
 # RUN chmod +x /tmp/start.sh
 
 
-EXPOSE 8090
 
+
+WORKDIR nodedocker
 # cd /tmp
 
 # try to remove the repo if it already exists
@@ -55,14 +56,20 @@ EXPOSE 8090
 
 #RUN git clone https://github.com/pallaviataws/nodedocker.git
 
-COPY /nodedocker .
-WORKDIR nodedocker
-
+COPY package.json package-lock.json .
 
 RUN npm install
-CMD npm -s start
+
+# Bundle app source
+COPY . .
+
+
+EXPOSE 8090
+
+
+
 #RUN npm start
-#CMD [ "npm", "start" ]
+CMD [ "npm", "start" ]
 # not working CMD ./tmp/start.sh
 
 # WORKDIR /usr/src/app
