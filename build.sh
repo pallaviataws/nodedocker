@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 
+
 # confirm docker daemon is running and connected
 sudo docker version
 
@@ -11,4 +12,4 @@ sudo docker build  --no-cache -t nvm .
 sudo docker images
 
 # enter container terminal
-sudo docker run -p 8090:8080 -i -t nvm bash
+sudo docker run -p 8090:8080 -d nvm 
