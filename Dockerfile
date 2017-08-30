@@ -71,9 +71,15 @@ EXPOSE 8090
 
 
 #RUN npm start
-CMD [ "npm", "start" ]
+#CMD [ "npm", "start" ]
 # not working CMD ./tmp/start.sh
 
 # WORKDIR /usr/src/app
 # COPY package.json .
 # RUN npm install
+
+ADD startServer.sh 
+
+RUN chmod +x /tmp/startServer.sh
+
+CMD startServer.sh
