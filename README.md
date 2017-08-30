@@ -8,6 +8,17 @@ https://stackoverflow.com/questions/8588768/git-push-username-password-how-to-av
 delete all containers and images
 #!/bin/bash
 # Delete all containers
-docker rm $(docker ps -a -q)
+docker rm $(docker ps -a -q)  
+or sudo docker rm $(sudo docker ps -a -q)
 # Delete all images
 docker rmi $(docker images -q)
+or
+sudo docker rmi $(sudo docker images -q)
+
+to see all containers
+sudo docker ps -a
+sudo docker stop container_id
+
+https://stackoverflow.com/questions/8588768/git-push-username-password-how-to-avoid
+
+https://nodejs.org/en/docs/guides/nodejs-docker-webapp/
