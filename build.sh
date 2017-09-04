@@ -14,7 +14,11 @@ sudo docker images
 # enter container terminal
 sudo docker run -p 8090:8080 -d nvm 
 
-sudo docker run -p 8000:80 -d nginx
+# run docker with nginx
+cd ../nginx
+
+sudo docker build -t nginx .
+# sudo docker run -p 8000:80 -d nginx
 
 
 
