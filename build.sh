@@ -6,13 +6,13 @@ sudo docker version
 
 # build the image based on the Dockerfile and name it `nvm`
 # cache should be enabled. the git should pull the code everytime, if cache is enabled
-sudo docker build  -t dhirajNvm .
+sudo docker build  -t nvm .
 
 # confirm image is present
 sudo docker images
 
 # enter container terminal
-sudo docker run -d -p 3000:3000 --name nodeApp dhirajNvm 
+sudo docker run -d -p 3000:3000 --name nodeApp nvm 
 
 # run docker with nginx
 cd nginx
