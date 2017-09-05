@@ -20,7 +20,7 @@ cd nginx
 sudo docker build -t nginx .
 # sudo docker run -p 8000:80 -d nginx
 
-sudo docker run -d -p 8000:80 --link nodeApp:app --name dhiraj/nginxProxy nginx
+sudo docker run -d -p 8000:80 --link nodeApp:app --name nginxProxy nginx
 
 
 
