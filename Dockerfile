@@ -66,7 +66,7 @@ COPY . .
 RUN npm install
 
 
-EXPOSE 8090
+EXPOSE 3000
 
 
 
