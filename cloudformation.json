@@ -1,0 +1,32 @@
+{
+  "AWSTemplateFormatVersion" : "2010-09-09",
+    "Parameters":{
+    "KeyPair":{
+        "Description" : "Name of an existing EC2 KeyPair",
+      "Type" : "AWS::EC2::KeyPair::KeyName",
+      "ConstraintDescription" : "must be the name of an existing EC2 KeyPair."
+        
+    }
+},
+    "Resources":{
+        "Ec2Instance":{
+            "Properties":{
+                "ImageId":"ami-cd0f5cb6",
+                "InstanceType":"t2.micro",
+                "KeyName":{
+                    "Ref":"KeyPair"
+                },
+                "SecurityGroups":["cf_demo"]
+             },
+            "Type":"AWS::EC2::Instance"
+        }
+    },
+    "Outputs":{
+        "InstanceId":{
+            "Description":"The instance id",
+            "Value":{
+                "Ref":"Ec2Instance"
+            }
+        }
+    }
+}
